@@ -1,0 +1,32 @@
+<?php
+function tripal_search_menu() {
+  $items = array();
+  // the administative settings menu
+  $items['chado/tripal_search'] = array(
+    'title' => 'Tripal Search',
+    'description' => 'Tripal search allows retrieval of information.',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['chado/tripal_search/search_gb'] = array(
+    'title' => 'Search genome broswer',
+    'description' => 'Excercise to do things drupal way',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('tripal_search_form'),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file'=> 'tripal_search_gb.inc',
+  );
+  
+  $items['chado/tripal_search/blat_gb'] = array(
+    'title' => 'BLAT',
+    'description' => 'Excercise to do things drupal way',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('tripal_search_blat_form'),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file'=>'tripal_search_blat.inc',
+  );
+
+  return $items;
+}

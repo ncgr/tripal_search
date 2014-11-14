@@ -1,0 +1,12 @@
+name = Tripal Search
+description = Excercise to replace the IOWA's search page
+core = 7.x
+SEARCH = tripal_search
+package = Tripal
+version = 7.x-2.0-rc1
+
+dependencies[] = tripal_core
+dependencies[] = tripal_views
+dependencies[] = tripal_cv
+version = "7.x-2.0-rc1"
+
